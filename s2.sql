@@ -38,6 +38,15 @@ CREATE TABLE download_logs (
     timestamp DATETIME
 );
 
+CREATE TABLE user_serials (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    serial_number VARCHAR(255) NOT NULL,
+    encrypted_serial VARCHAR(255) NOT NULL
+);
+
 select * from download_logs;
 select * from upload_logs;
 select * from files;
+select * from user_serials;
+DROP TABLE user_serials;
